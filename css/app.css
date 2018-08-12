@@ -1,0 +1,190 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, article, footer,aside,section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.main-nav{
+  background-color: #553399;
+}
+.brand-name{
+  color: white;
+  font-variant: small-caps;
+  font-size: 40px;
+}
+
+.search{
+  background: #345455;
+  color: white;
+}
+
+.deal-heading{
+  color: #553399;
+  font-size: 2em;
+  font-family: monospace;
+}
+
+.deal-div{
+  border: 1px dotted #553399;
+
+}
+
+.offer img{
+  box-shadow: 3px 3px 4px #003322;
+}
+
+.facilities{
+  background: linear-gradient(to right, #159957, #155799);
+  color: white;
+}
+
+.icons{
+  font-size: 2rem;
+}
+
+.fac-title{
+  font-family: monospace;
+}
+
+.fac-subtitle{
+  font-family: arial;
+}
+
+.info{
+  background-color: #553399;
+  color: white;
+}
+
+.about {
+  font-size: 1.2em;
+}
+
+.social .fab {
+  color: #ddd;
+  opacity: 0.7;
+}
+
+
+#bannerCarousal .carousel-control-prev-icon,
+#bannerCarousal .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+
+  background-size: 100%, 100%;
+  opacity: 0.5;
+}
+
+.deals .carousel-control-prev-icon,
+.deals .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.deals .carousel-control-prev-icon:after{
+  content: '<<';
+  font-size: 15px;
+  color: #220000;
+}
+.deals .carousel-control-next-icon:after{
+  content: '>>';
+  font-size: 15px;
+  color: #220000;
+}
+
+
+
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .deals .carousel-inner .active,
+    .deals .carousel-inner .active + .carousel-item,
+    .deals .carousel-inner .active + .carousel-item + .carousel-item,
+    .deals .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .deals .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .deals .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .deals .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .deals .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .deals .carousel-inner .carousel-item-next,
+    .deals .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .deals .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .deals .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .deals .carousel-item-next.carousel-item-left + .carousel-item,
+    .deals .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .deals .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .deals .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+   .deals  .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+   .deals  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .deals .carousel-item-prev.carousel-item-right + .carousel-item,
+    .deals .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .deals .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .deals .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}
+
+
